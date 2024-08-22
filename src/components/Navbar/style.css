@@ -1,0 +1,243 @@
+.nav-menu-new {
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  border-bottom: 2px solid var(--type-and-dark-bg);
+  background-color: var(--footer);
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  min-width: 100vw;
+  padding-top: 10vh;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transition: background-color 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.container-navbar {
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1296px;
+  height: 20vh;
+  margin-left: 0;
+  margin-right: 0;
+  padding-top: 40px;
+  padding-left: 72px;
+  padding-right: 72px;
+  display: flex;
+  position: static;
+}
+
+.nav-links-flex-block {
+  grid-column-gap: 48px;
+  grid-row-gap: 48px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.w-layout-vflex {
+  flex-direction: column;
+  align-items: flex-start;
+  display: flex;
+}
+
+.nav-link-new {
+  flex-flow: column;
+  justify-content: flex-start;
+  align-self: auto;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link {
+  flex-flow: column;
+  justify-content: flex-start;
+  align-self: auto;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.w-inline-block {
+  max-width: 100%;
+  display: inline-block;
+}
+
+a {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.nav-link-text {
+  color: var(--hover);
+  column-count: auto;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: normal;
+  object-position: 50% 50%;
+  flex: 0 auto;
+  order: 0;
+  align-self: center;
+  height: auto;
+  /* font-family: roca, sans-serif;
+  font-size: 64px;
+  font-weight: 700; */
+  line-height: 100%;
+  text-decoration: none;
+}
+
+.navbar-new {
+  background-color: var(--background);
+  justify-content: center;
+  align-items: center;
+  margin-left: 0;
+  margin-right: 0;
+  display: flex;
+  position: relative;
+  align-self: center;
+}
+
+/* Media query for screens narcolumner than 480px (e.g., mobile devices) */
+@media (max-width: 480px) {
+  .nav-left {
+    display: none;
+  }
+}
+
+.w-nav {
+  z-index: 1000;
+}
+
+.nav-bar-wrapper.new {
+  justify-content: space-between;
+  align-self: center;
+}
+.nav-bar-wrapper {
+  z-index: 6;
+  mix-blend-mode: normal;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1296px;
+  display: flex;
+  position: relative;
+}
+.w-layout-hflex {
+  flex-direction: row;
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+}
+
+.nav-right {
+  justify-content: flex-end;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+
+.link-block-home {
+  align-self: flex-start;
+}
+.w-inline-block {
+  max-width: 100%;
+  display: inline-block;
+}
+a {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.logo-container {
+  z-index: 4;
+  justify-content: flex-start;
+  align-self: flex-start;
+  align-items: flex-start;
+  width: 220px;
+  height: 103px;
+  display: block;
+  position: relative;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: auto;
+}
+@media screen and (max-width: 479px) {
+  .navbar-new {
+    overflow: visible;
+  }
+  .container-navbar {
+    padding-top: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .container-navbar {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .hero-section {
+    max-width: 100%;
+    height: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: hidden;
+  }
+  .hero-container {
+    align-self: flex-start;
+    max-width: 100%;
+    padding-top: 2vh;
+  }
+  .hero-header {
+    justify-content: flex-start;
+    align-self: center;
+    align-items: center;
+    width: 400px;
+    max-width: 400px;
+    height: 260px;
+    overflow: hidden;
+  }
+  .hero-lockup {
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .brush_02 {
+    justify-content: center;
+    align-items: flex-start;
+    width: 400px;
+    height: auto;
+    top: 0%;
+    left: 0%;
+  }
+  .logo-container {
+    width: 108px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .master-circle-container.down-button {
+    display: none;
+  }
+}

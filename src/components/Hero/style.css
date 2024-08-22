@@ -1,0 +1,255 @@
+.hero-section {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-left: 17vw;
+  padding-right: 15vw;
+  padding-bottom: 10vh;
+  text-decoration: none;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--background);
+}
+
+.master-circle-container.down-button {
+  z-index: 10;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+.hero-container {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-self: center;
+  align-items: center;
+  width: 100%;
+  padding: 2vh 0 6vh;
+  text-decoration: none;
+  display: flex;
+}
+
+.hero-header {
+  flex-direction: column;
+  justify-content: center;
+  align-self: flex-start;
+  align-items: flex-start;
+  width: 920px;
+  max-width: 920px;
+  height: 406px;
+  text-decoration: none;
+  display: flex;
+}
+
+.hero-lockup {
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  width: 100%;
+  max-width: 996px;
+  height: 466px;
+  text-decoration: none;
+  display: flex;
+  position: relative;
+}
+
+.brush_02 {
+  width: 960px;
+  height: 590px;
+  display: inline-flex;
+  position: absolute;
+  top: 0%;
+  bottom: auto;
+  left: 0%;
+  right: 0%;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+.logo {
+  z-index: 1;
+  aspect-ratio: auto;
+  object-fit: cover;
+  width: 650px;
+  height: auto;
+  position: absolute;
+  top: 118px;
+  left: 90px;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  display: inline-block;
+}
+img {
+  border: 0;
+}
+
+.hero-column {
+  z-index: 2;
+  grid-row-gap: 12px;
+  justify-content: space-evenly;
+  align-self: flex-start;
+  align-items: flex-start;
+  width: 920px;
+  max-width: 920px;
+  height: 20vh;
+  margin-top: 24px;
+  text-decoration: none;
+  display: flex;
+  position: relative;
+}
+
+.hero-intro {
+  z-index: 2;
+  grid-row-gap: 12px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 100%;
+  text-decoration: none;
+  display: flex;
+  position: relative;
+}
+
+.subtitles {
+  color: var(--type-and-dark-bg);
+  letter-spacing: 0.21em;
+  text-transform: uppercase;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: Hanken Grotesk, sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 124%;
+  text-decoration: none;
+}
+
+.intro-copy {
+  color: var(--type-and-dark-bg);
+  letter-spacing: 0.06em;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: Hanken Grotesk, sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 171%;
+  text-decoration: none;
+}
+
+.hero-subsection {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.down-button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+}
+
+.button-wrapper {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 479px) {
+  .hero-section {
+    max-width: 100%;
+    height: 100vh;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    overflow: hidden;
+  }
+  /* .button-wrapper {
+    display: none;
+  } */
+  .hero-container {
+    align-self: flex-start;
+    max-width: 100%;
+    padding-top: 2vh;
+  }
+  .hero-header {
+    justify-content: flex-start;
+    align-self: center;
+    align-items: center;
+    width: 400px;
+    max-width: 400px;
+    height: 260px;
+    overflow: hidden;
+  }
+  .hero-lockup {
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .brush_02 {
+    justify-content: center;
+    align-items: flex-start;
+    width: 400px;
+    height: auto;
+    top: 0%;
+    left: 0%;
+    position: absolute;
+  }
+  .hero-column {
+    grid-row-gap: 0px;
+    align-self: center;
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    margin: 0;
+    padding-left: 16%;
+    padding-right: 16%;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .hero-intro {
+    grid-row-gap: 8px;
+  }
+  .logo {
+    width: 282px;
+    height: auto;
+    top: 19%;
+    left: 16%;
+  }
+  .subtitle {
+    font-size: 23px;
+    line-height: 135%;
+  }
+  .intro-copy {
+    font-size: 17px;
+  }
+  svg {
+    overflow: hidden;
+    height: 200px;
+  }
+  .subtitle {
+    font-size: 23px;
+    line-height: 135%;
+  }
+  .intro-copy {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .master-circle-container.down-button {
+    display: none;
+  }
+}
