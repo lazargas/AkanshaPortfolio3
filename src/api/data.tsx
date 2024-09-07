@@ -10,89 +10,51 @@ export type Project = {
 export const projects: Project[] = [
   {
     content:
-      "https://cdn.prod.website-files.com/6684052a067906bc8f1b443e/669538ef79c8c4181af7de28_Apple-preview.jpg",
-    title: "Apple",
-    subHeading: "Campaign Pages",
-    skills: ["VISUAL", "INTERACTIVE"],
+      "https://static.wixstatic.com/media/b90705_728c3dc737fc4075a4e91e93de53ec19~mv2.png/v1/fill/w_390,h_390,al_c,q_85,usm_2.00_1.00_0.00,enc_auto/Artboard%201%20copy%203.png",
+    title: "Fineapple",
+    subHeading: "Mobile Application",
+    skills: ["UI/UX", "DESIGN LEAD"],
   },
   {
     content:
-      "https://cdn.prod.website-files.com/6684052a067906bc8f1b443e/668d4e4105f2f0146ecb9489_Moneybox-30-preview.jpg",
-    title: "Moneybox",
-    subHeading: "Mobile App Version 3.0",
+      "https://lever-client-logos.s3.us-west-2.amazonaws.com/9f8ae7a1-e18b-49a4-98cc-32d767d4663c-1621589042415.png",
+    title: "Cred",
+    subHeading: "Homepage Redesign - Unofficial",
     skills: ["UI/UX", "PRODUCT"],
   },
   {
     content:
-      "https://cdn.prod.website-files.com/6684052a067906bc8f1b443e/668e9d3c3c3576465c718462_WWE-preview.jpg",
-    title: "WWE",
-    subHeading: "TV apps, mobile app and web",
+      "https://play-lh.googleusercontent.com/UwxM-7Oay90oXBeX6PlA_cu_KCZP1Tk4yPUmFbH7z8D598DMPJkE5TCqUkPlDOy9fUg=w240-h480",
+    title: "Oda Class",
+    subHeading: "Graphic Designing",
     skills: ["VISUAL", "UI"],
   },
   {
     content:
-      "https://cdn.prod.website-files.com/6684052a067906bc8f1b443e/669538ef79c8c4181af7de28_Apple-preview.jpg",
-    title: "Apple",
-    subHeading: "Ennie moo",
-    skills: ["VISUAL", "INTERACTIVE"],
+      "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/58268e174205367.649dbe49c95fa.png",
+    title: "Chinmaya Honey",
+    subHeading: "Website Design",
+    skills: ["Product", "Freelance"],
   },
   {
     content:
-      "https://cdn.prod.website-files.com/6684052a067906bc8f1b443e/668d4e4105f2f0146ecb9489_Moneybox-30-preview.jpg",
-    title: "Moneybox",
-    subHeading: "Mobile App Version 3.0",
-    skills: ["UI/UX", "PRODUCT"],
-  },
-  {
-    content:
-      "https://cdn.prod.website-files.com/6684052a067906bc8f1b443e/668e9d3c3c3576465c718462_WWE-preview.jpg",
-    title: "WWE",
-    subHeading: "TV apps, mobile app and web",
-    skills: ["VISUAL", "UI"],
-  },
-  {
-    content:
-      "https://cdn.prod.website-files.com/6684052a067906bc8f1b443e/669538ef79c8c4181af7de28_Apple-preview.jpg",
-    title: "Apple",
-    subHeading: "Ennie moo",
-    skills: ["VISUAL", "INTERACTIVE"],
-  },
-  {
-    content:
-      "https://cdn.prod.website-files.com/6684052a067906bc8f1b443e/668d4e4105f2f0146ecb9489_Moneybox-30-preview.jpg",
-    title: "Moneybox",
-    subHeading: "Mobile App Version 3.0",
-    skills: ["UI/UX", "PRODUCT"],
-  },
-  {
-    content:
-      "https://cdn.prod.website-files.com/6684052a067906bc8f1b443e/668e9d3c3c3576465c718462_WWE-preview.jpg",
-    title: "WWE",
-    subHeading: "TV apps, mobile app and web",
-    skills: ["VISUAL", "UI"],
-  },
-  {
-    content:
-      "https://cdn.prod.website-files.com/6684052a067906bc8f1b443e/668e9d3c3c3576465c718462_WWE-preview.jpg",
-    title: "WWE",
-    subHeading: "TV apps, mobile app and web",
-    skills: ["VISUAL", "UI"],
+      "https://instagram.fhyd14-2.fna.fbcdn.net/v/t51.2885-19/336024203_3069543656688240_904584511367662742_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.fhyd14-2.fna.fbcdn.net&_nc_cat=100&_nc_ohc=lMCyoiaCndcQ7kNvgGeaIjA&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AYAhRn76wPrPXYW1H3F9NAh21g_SXyvjiDPZiaXl9kiFqw&oe=66D42203&_nc_sid=8b3546",
+    title: "Sweetscapes",
+    subHeading: "Mobile Application",
+    skills: ["PRODUCT", "UX"],
   },
 ];
 
 
 export const aboutContent: JSX.Element =
   <>
-    My expertise encompasses visual, UI, and interaction design, with a strong emphasis on crafting aesthetically pleasing and engaging experiences.
+    Transitioning to digital design, I now focus on creating thoughtful and intuitive user experiences. I thrive in collaborative environments and enjoy working directly with clients to bring projects to life.
     <br />
     <br />
-    I thrive in collaborative environments and enjoy working directly with clients to bring projects to life. My skill set includes developing pattern libraries, style guides, conceptualising designs, and delving into branding.
+    I thrive in collaborative environments and enjoy working directly with clients to bring projects to life. My expertise includes developing pattern libraries, style guides, and exploring branding. I’m passionate about animation, prototyping, and illustration, with experience in large-scale web builds, app design.
     <br />
     <br />
-    I am also passionate about animation, prototyping, and illustration and have a proven track record in large-scale web and platform builds, app design, and content creation for social media.
-    <br />
-    <br />
-    In my spare time, I enjoy painting and drawing; you can see more of my work in my art portfolio.
+    In my spare time, I enjoy being with friends and family.
   </>
 
 

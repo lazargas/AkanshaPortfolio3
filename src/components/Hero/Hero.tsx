@@ -105,8 +105,10 @@ export const Hero = ({ }: HeroProps) => {
                                             x2="86.58300018310547"
                                             y2="53.72600173950195"
                                         >
-                                            <stop offset="0%" stopColor="rgb(221,155,249)"></stop>
-                                            <stop offset="100%" stopColor="rgb(245,204,57)"></stop>
+                                            {/* <stop offset="0%" stopColor="rgb(221,155,249)"></stop>
+                                            <stop offset="100%" stopColor="rgb(245,204,57)"></stop> */}
+                                            <stop offset="0%" stopColor="rgb(37, 31, 79)"></stop>
+                                            <stop offset="100%" stopColor="rgb(37, 31, 79)"></stop>
                                         </linearGradient>
                                     </defs>
                                     <g clipPath="url(#__lottie_element_2)">
@@ -135,11 +137,12 @@ export const Hero = ({ }: HeroProps) => {
                                 </svg>
                             </div>
                             <img
-                                src="https://cdn.prod.website-files.com/6683c7a124683f081d444a5a/66979c683628f48fe6954e82_Logo.svg"
+                                src="https://open-akarsh-bucket.s3.amazonaws.com/AKANSHA.png"
                                 loading="lazy"
                                 alt="Nicola Hankins logotype"
                                 className="logo"
                             />
+
                         </div>
                     </div>
                     <div className="hero-column">
@@ -149,12 +152,20 @@ export const Hero = ({ }: HeroProps) => {
                         </div>
 
                         <div className="hero-intro">
-                            <h2 className="subtitles">Lead<br />Designer</h2>
+                            <div className='flex'>
+                                <h2 className="subtitles">Prod</h2>
+                                <h2 className='subtitles' style={{ color: "#000" }}>uct</h2>
+                            </div>
+                            <div className='flex'>
+                                <h2 className="subtitles">Desig</h2>
+                                <h2 className='subtitles' style={{ color: "#000" }}>ner</h2>
+                            </div>
                             <p className="intro-copy">
-                                Crafting visually beautiful, engaging experiences through innovative UI and interaction
-                                design.
+                                <span style={{ color: "#fff" }}>Crafting</span> visually beautiful, engaging <span style={{ color: "#fff" }}>exper</span>iences through innovative UI and interaction design.
                             </p>
+
                         </div>
+
                     </div>
                 </motion.div>
             </div >
@@ -162,3 +173,6 @@ export const Hero = ({ }: HeroProps) => {
         </>
     );
 }
+
+
+// https://cdn.prod.website-files.com/6683c7a124683f081d444a5a/66979c683628f48fe6954e82_Logo.svg

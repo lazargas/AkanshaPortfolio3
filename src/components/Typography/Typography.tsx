@@ -28,7 +28,7 @@ export const Typography = ({ text, size, color, font, letterSpacing, weight, lin
 
     return (
         <>
-            <div className='subtitle' style={{ fontSize: ` ${width < 498 ? `${smallSize}px` : `${size}px`} `, color: `${color}`, fontFamily: `${font}`, letterSpacing: `${letterSpacing}em`, fontWeight: `${weight}`, lineHeight: `${lineHeight}%`, textAlign: `${textAlign!}` }} >
+            <div className='subtitle' style={{ fontSize: ` ${width < 498 ? `${smallSize}px` : `${size}px`} `, color: `${color}`, fontFamily: `${font}`, letterSpacing: `${letterSpacing}em`, fontWeight: `${weight ? weight : "400"}`, lineHeight: `${lineHeight}%`, textAlign: `${textAlign!}` }} >
                 {text}
             </div >
         </>

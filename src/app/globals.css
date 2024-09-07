@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: roca;
-  src: url("../assets/fonts/Roca\ Regular.ttf");
+  src: url("../assets/fonts/SERIM___.ttf");
 }
 
 * {
@@ -15,7 +15,8 @@
 
 :root {
   --type-and-dark-bg: #181532;
-  --background: rgb(255, 237, 239);
+  /* --background: rgb(255, 237, 239); */
+  --background: #fdfff8;
   --featured-gradient-01: #deb9ee;
   --project-preview-bg: #11091b;
   --links: #ed5cbd;

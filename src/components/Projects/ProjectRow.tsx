@@ -61,7 +61,7 @@ const ProjectItem = ({ title, subHeading, skills, content }: ProjectItemProps) =
                             <div className="featured-project-left">
                                 <motion.div variants={titleVars} className="client-name-with-arrow">
                                     <div className="client-name-with-arrow">
-                                        <Typography text={title} size={116} smallSize={48} font='roca' letterSpacing={0.02} weight={800} />
+                                        <Typography text={title} size={116} smallSize={48} font='roca' letterSpacing={0.08} weight={800} />
                                     </div>
                                     <motion.div variants={arrowVars} className="link-arrow-container">
 

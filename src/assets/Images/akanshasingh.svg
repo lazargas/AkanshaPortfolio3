@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 100">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #181532;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <text class="cls-1" x="10" y="40" font-family="Arial" font-size="40">Akansha Singh</text>
+</svg>

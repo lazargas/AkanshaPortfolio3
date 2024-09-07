@@ -30,7 +30,7 @@ export const NavbarWrapper = ({ isHome }: NavbarWrapperProps) => {
             <motion.div
                 className="navbar-new w-nav"
                 ref={navRef}
-                animate={{ backgroundColor: navBarOpen ? "#ffdee1" : "rgb(255, 237, 239)" }}
+                animate={{ backgroundColor: navBarOpen ? "#fdfff8" : "#fdfff8" }}
                 transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: 0.25 }}
             >
                 <div className='container-navbar w-container'>

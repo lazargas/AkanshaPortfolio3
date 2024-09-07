@@ -2,7 +2,7 @@
   grid-column-gap: 16px;
   grid-row-gap: 16px;
   border-bottom: 2px solid var(--type-and-dark-bg);
-  background-color: var(--footer);
+  background-color: var(--white);
   flex-flow: column;
   justify-content: center;
   align-items: center;
