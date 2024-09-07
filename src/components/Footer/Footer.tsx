@@ -40,7 +40,7 @@ export const Footer = ({ }: FooterProps) => (
                 }
             </div>
             <div className="footer-social-icons">
-                <a href="http://www.linkedin.com/in/nicolahankins" target="_blank" className="link-block-footer w-inline-block">
+                <a href="https://www.linkedin.com/in/akansha-singh-06aa98202/" target="_blank" className="link-block-footer w-inline-block">
                     <img
                         src="https://cdn.prod.website-files.com/6650a31b90117b0556917761/668548a300f000f21235c759_Vectors-Wrapper.svg"
                         loading="lazy"
@@ -50,7 +50,7 @@ export const Footer = ({ }: FooterProps) => (
                         className="footer-icon-wrapper"
                     />
                 </a>
-                <a href="https://www.instagram.com/nickyzoid/" target="_blank" className="link-block-footer w-inline-block">
+                <a href="https://www.instagram.com/singh__akansha/" target="_blank" className="link-block-footer w-inline-block">
                     <img
                         src="https://cdn.prod.website-files.com/6650a31b90117b0556917761/668548a376e074a0aeb40ea5_Vectors-Wrapper.svg"
                         loading="lazy"
@@ -60,7 +60,7 @@ export const Footer = ({ }: FooterProps) => (
                         className="footer-icon-wrapper"
                     />
                 </a>
-                <a href="https://www.pinterest.co.uk/nickyzoid/" target="_blank" className="link-block-footer w-inline-block">
+                <a href="https://www.behance.net/akanshasingh48" target="_blank" className="link-block-footer w-inline-block">
                     <img
                         src="https://cdn.prod.website-files.com/6650a31b90117b0556917761/668548a454ec547505fd0c6e_Vectors-Wrapper.svg"
                         loading="lazy"

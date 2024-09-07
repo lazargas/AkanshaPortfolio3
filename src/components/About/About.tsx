@@ -43,7 +43,7 @@ export const About = ({ title, intro, about, isContact }: AboutProps) => (
                         <div className="paragraph about">
                             {about}
                         </div>
-                        <a href="https://nickyzoid.com/" target="_blank" className="link-2">
+                        <a href="https://behance.net/akanshasingh48" target="_blank" className="link-2">
                             Art portfolio
                         </a>
                     </div>

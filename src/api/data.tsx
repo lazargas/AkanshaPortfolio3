@@ -25,14 +25,14 @@ export const projects: Project[] = [
   {
     content:
       "https://play-lh.googleusercontent.com/UwxM-7Oay90oXBeX6PlA_cu_KCZP1Tk4yPUmFbH7z8D598DMPJkE5TCqUkPlDOy9fUg=w240-h480",
-    title: "Oda Class",
+    title: "Oda",
     subHeading: "Graphic Designing",
     skills: ["VISUAL", "UI"],
   },
   {
     content:
       "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/58268e174205367.649dbe49c95fa.png",
-    title: "Chinmaya Honey",
+    title: "Chinmaya-Honey",
     subHeading: "Website Design",
     skills: ["Product", "Freelance"],
   },
@@ -58,7 +58,7 @@ export const aboutContent: JSX.Element =
   </>
 
 
-export const aboutIntroString: string = " Nicola is a Lead Designer with over 15 years industry experience, focusing on crafting visually beautiful, engaging experiences through innovative UI and interaction design."
+export const aboutIntroString: string = " Akansha is a quick designer with over 2 years industry experience, focusing on crafting visually beautiful, engaging experiences through innovative UI and interaction design."
 
 export const contactIntroString: string = "I'm currently available for freelance work whilst considering my next permanent position."
 

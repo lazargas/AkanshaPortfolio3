@@ -75,7 +75,7 @@ const ProjectItem = ({ title, subHeading, skills, content }: ProjectItemProps) =
                             </div>
                             <div className="project-category-right">
                                 {
-                                    skills && skills.map((skill, index) => <Typography textAlign='left' smallSize={17} text={skill} size={21} font='Hanken Grotesk' letterSpacing={0.21} weight={600} lineHeight={200} />)
+                                    skills && skills.map((skill, index) => <Typography textAlign='left' smallSize={17} text={skill} size={21} font='Hanken Grotesk' letterSpacing={0.02} weight={600} lineHeight={200} />)
                                 }
                             </div>
                             <Icon glow={true} stroke={true} content={content} isAnimate={width < 498 ? false : true} />

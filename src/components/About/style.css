@@ -32,7 +32,7 @@
 }
 
 .hygiene-title {
-  background-color: var(--button-gradient-03);
+  background-color: var(--project-preview-bg);
   letter-spacing: -0.02em;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -45,7 +45,7 @@
   font-weight: 400; /*change*/
   line-height: 110%;
   text-decoration: none;
-}
+  }
 
 .about {
   align-self: flex-start;

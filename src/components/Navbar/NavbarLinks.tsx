@@ -35,8 +35,8 @@ export const NavbarLinks = ({ text, link }: NavbarLinksProps) => (
     <>
         <motion.div className="nav-link-new" style={{ opacity: 1 }} initial="initial" animate="open" whileHover="animate" >
             <motion.a href={link} aria-current="page" className="nav-link w-inline-block w--current"   >
-                <motion.div className="nav-link-text" id="textTranslateId" variants={textVariants} ><Typography text={text} size={64} smallSize={48} font='roca' weight={600} letterSpacing={0.06} /></motion.div>
-                <motion.div className="nav-link-text" id="textTranslateId" variants={textVariants} ><Typography text={text} size={64} smallSize={48} font='roca' weight={600} letterSpacing={0.06} /></motion.div>
+                <motion.div className="nav-link-text" id="textTranslateId" variants={textVariants} ><Typography text={text} size={64} smallSize={48} font='roca' weight={600} letterSpacing={0.01} /></motion.div>
+                <motion.div className="nav-link-text" id="textTranslateId" variants={textVariants} ><Typography text={text} size={64} smallSize={48} font='roca' weight={600} letterSpacing={0.01} /></motion.div>
             </motion.a>
         </motion.div>
     </>

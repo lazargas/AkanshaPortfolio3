@@ -31,7 +31,7 @@ export const Hero = ({ }: HeroProps) => {
 
     const pathRef = useRef(null);
     const containerRef = useRef(null);
-    const { navRef } = useContext(PortfolioContext);
+    const { navRef,width } = useContext(PortfolioContext);
     const { scrollYProgress } = useScroll();
 
 
@@ -64,6 +64,7 @@ export const Hero = ({ }: HeroProps) => {
             duration: 3
         })
     }
+    
 
 
 
@@ -161,7 +162,7 @@ export const Hero = ({ }: HeroProps) => {
                                 <h2 className='subtitles' style={{ color: "#000" }}>ner</h2>
                             </div>
                             <p className="intro-copy">
-                                <span style={{ color: "#fff" }}>Crafting</span> visually beautiful, engaging <span style={{ color: "#fff" }}>exper</span>iences through innovative UI and interaction design.
+                                <span style={{ color: width < 498 ? "#000" : "#fff" }}>Crafting</span> visually beautiful, engaging <span style={{ color: width < 498 ? "#000" : "#fff" }}>exper</span>iences through innovative UI and interaction design.
                             </p>
 
                         </div>
