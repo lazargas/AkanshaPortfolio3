@@ -39,7 +39,7 @@ export const NavbarWrapper = ({ isHome }: NavbarWrapperProps) => {
                             <a className='link-block-home w-inline-block' href="/">
                                 <div className='logo-container'>
                                     {isHome && <img
-                                        src="https://open-akarsh-bucket.s3.amazonaws.com/AKANSHA.png"
+                                        src="https://d24ednibesvunt.cloudfront.net/AKANSHA.png"
                                         loading="lazy"
                                         width={width < 498 ? "108" : "216"}
                                         alt="logo"
