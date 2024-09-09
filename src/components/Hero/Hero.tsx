@@ -138,7 +138,7 @@ export const Hero = ({ }: HeroProps) => {
                                 </svg>
                             </div>
                             <img
-                                src="https://open-akarsh-bucket.s3.amazonaws.com/AKANSHA.png"
+                                src="https://d24ednibesvunt.cloudfront.net/AKANSHA.png"
                                 loading="lazy"
                                 alt="Nicola Hankins logotype"
                                 className="logo"
