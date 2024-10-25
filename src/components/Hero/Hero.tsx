@@ -1,5 +1,5 @@
 "use client"
-import React, { useContext, useEffect, useRef } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import "./style.css";
 import { cubicBezier, motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { gsap } from "gsap";
@@ -12,6 +12,10 @@ import Link from 'next/link';
 import { PortfolioContext } from '@/context/Portfolio';
 import ScrollToPlugin from 'gsap/ScrollToPlugin';
 import { MouseAnimation } from '@/hooks/MouseAnimation';
+import { useDispatch, useSelector } from 'react-redux';
+import {  selectViewportWidth, setWidth } from '@/redux/slice/viewPortSlice';
+import akansha from '@/assets/Images/AKANSHA.svg';
+import Image from 'next/image';
 
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
@@ -31,29 +35,12 @@ export const Hero = ({ }: HeroProps) => {
 
     const pathRef = useRef(null);
     const containerRef = useRef(null);
-    const { navRef,width } = useContext(PortfolioContext);
     const { scrollYProgress } = useScroll();
 
 
 
-
-    // useGSAP(() => {
-
-    //     console.log(pathRef);
-    //     gsap.fromTo(pathRef.current,
-    //         { drawSVG: "0%", }, {
-    //         drawSVG: "100%",
-    //         duration: 1,
-    //         ease: "none",
-    //         scrollTrigger: {
-    //             trigger: containerRef.current,
-    //             start: "center center",
-    //             end: "bottom center",
-    //             scrub: true,
-    //         }
-    //     });
-    // }, {});
-
+    
+    const dispatch = useDispatch();
     const handleClick = () => {
         const element = document.querySelector(".hero-section");
         const height: number = element?.clientHeight! + 200;
@@ -64,16 +51,18 @@ export const Hero = ({ }: HeroProps) => {
             duration: 3
         })
     }
-    
-
-
-
+    useEffect(()=>{
+        if (window != undefined) {
+            const Innerwidth = window.innerWidth;
+            dispatch(setWidth({Innerwidth}));    
+        }
+        
+    },[dispatch]);
+    const items = useSelector(selectViewportWidth);
+    const innerWidth = items.Innerwidth;
     return (
         <>
             <div ref={containerRef} className="hero-section">
-
-
-
                 <motion.div
                     initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
@@ -137,8 +126,8 @@ export const Hero = ({ }: HeroProps) => {
                                     </g>
                                 </svg>
                             </div>
-                            <img
-                                src="https://d24ednibesvunt.cloudfront.net/AKANSHA.png"
+                            <Image
+                                src={akansha}
                                 loading="lazy"
                                 alt="Nicola Hankins logotype"
                                 className="logo"
@@ -162,7 +151,7 @@ export const Hero = ({ }: HeroProps) => {
                                 <h2 className='subtitles' style={{ color: "#000" }}>ner</h2>
                             </div>
                             <p className="intro-copy">
-                                <span style={{ color: width < 498 ? "#000" : "#fff" }}>Crafting</span> visually beautiful, engaging <span style={{ color: width < 498 ? "#000" : "#fff" }}>exper</span>iences through innovative UI and interaction design.
+                                <span style={{ color: innerWidth < 498 ? "#000" : "#fff" }}>Crafting</span> visually beautiful, engaging <span style={{ color: innerWidth < 498 ? "#000" : "#fff" }}>exper</span>iences through innovative UI and interaction design.
                             </p>
 
                         </div>
@@ -177,3 +166,20 @@ export const Hero = ({ }: HeroProps) => {
 
 
 // https://cdn.prod.website-files.com/6683c7a124683f081d444a5a/66979c683628f48fe6954e82_Logo.svg
+
+// useGSAP(() => {
+
+    //     console.log(pathRef);
+    //     gsap.fromTo(pathRef.current,
+    //         { drawSVG: "0%", }, {
+    //         drawSVG: "100%",
+    //         duration: 1,
+    //         ease: "none",
+    //         scrollTrigger: {
+    //             trigger: containerRef.current,
+    //             start: "center center",
+    //             end: "bottom center",
+    //             scrub: true,
+    //         }
+    //     });
+    // }, {});

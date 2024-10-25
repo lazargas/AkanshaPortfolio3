@@ -5,6 +5,10 @@ import { Navbar } from './Navbar';
 import "./style.css";
 import { ButtonNavContainer } from '../Button/NavButton';
 import { PortfolioContext } from '@/context/Portfolio';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectViewportWidth } from '@/redux/slice/viewPortSlice';
+import akansha from '@/assets/Images/AKANSHA.svg';  
+import Image from 'next/image';
 
 type NavbarWrapperProps = {
     isHome: boolean;
@@ -13,17 +17,7 @@ type NavbarWrapperProps = {
 export const NavbarWrapper = ({ isHome }: NavbarWrapperProps) => {
     const { navBarOpen } = useContext(PortfolioContext);
     const { navRef } = useContext(PortfolioContext);
-
-    const [width, setWidth] = useState<number>(0);
-    useEffect(() => {
-        if (window != undefined) {
-            const Innerwidth = window.innerWidth;
-            console.log(Innerwidth, "akarsh");
-            setWidth(Innerwidth);
-            console.log(width);
-        }
-
-    }, []);
+    const width = useSelector(selectViewportWidth);
 
     return (
         <>
@@ -38,8 +32,8 @@ export const NavbarWrapper = ({ isHome }: NavbarWrapperProps) => {
                         <div className='nav-left'>
                             <a className='link-block-home w-inline-block' href="/">
                                 <div className='logo-container'>
-                                    {isHome && <img
-                                        src="https://d24ednibesvunt.cloudfront.net/AKANSHA.png"
+                                    {isHome && <Image
+                                        src={akansha}
                                         loading="lazy"
                                         width={width < 498 ? "108" : "216"}
                                         alt="logo"
