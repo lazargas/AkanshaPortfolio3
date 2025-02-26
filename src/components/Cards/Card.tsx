@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import "./style.css";
 import { AnimatePresence, motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 
 
 type CardProps = {
@@ -31,6 +32,8 @@ const gradientVars = {
 
 export const Card = ({ content, title, subHeading, skills }: CardProps) => {
 
+    const router = useRouter();
+
     const [opacityHandler, setOpacityHandeler] = useState<number>(1);
     useEffect(() => {
         const el = document.querySelector("#wrapper");
@@ -51,11 +54,17 @@ export const Card = ({ content, title, subHeading, skills }: CardProps) => {
         )
     }, [opacityHandler]);
 
+    const handleNavigation = () => {
+        router.push(`/project/${title.toLowerCase()}`);
+    }
+
     return (
         <>
             <AnimatePresence>
                 <motion.div id="wrapper" initial="initial" animate="initial" whileHover="animate" role="listitem" className="collection-item w-dyn-item">
-                    <a href={`/project/${title.toLowerCase()}`} className="link-block-project-preview w-inline-block">
+                    <div
+                    onClick={handleNavigation}
+                     className="link-block-project-preview w-inline-block">
                         <motion.div
 
                             className="project-preview">
@@ -101,7 +110,7 @@ export const Card = ({ content, title, subHeading, skills }: CardProps) => {
                             <motion.div
                                 className="gradient-bg" style={{ opacity: `${opacityHandler}`, transition: "opacity 2s cubic-bezier(0.22, 1, 0.36, 1)" }} ></motion.div>
                         </motion.div>
-                    </a>
+                    </div>
                 </motion.div>
             </AnimatePresence>
         </>

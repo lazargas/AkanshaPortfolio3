@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import "./style.css";
 import { Typography } from '../Typography/Typography';
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
+import { PortfolioContext } from '@/context/Portfolio';
 
 type NavbarLinksProps = {
 
@@ -31,13 +33,26 @@ const textVariants = {
 
 
 
-export const NavbarLinks = ({ text, link }: NavbarLinksProps) => (
-    <>
-        <motion.div className="nav-link-new" style={{ opacity: 1 }} initial="initial" animate="open" whileHover="animate" >
-            <motion.a href={link} aria-current="page" className="nav-link w-inline-block w--current"   >
-                <motion.div className="nav-link-text" id="textTranslateId" variants={textVariants} ><Typography text={text} size={64} smallSize={48} font='roca' weight={600} letterSpacing={0.01} /></motion.div>
-                <motion.div className="nav-link-text" id="textTranslateId" variants={textVariants} ><Typography text={text} size={64} smallSize={48} font='roca' weight={600} letterSpacing={0.01} /></motion.div>
-            </motion.a>
-        </motion.div>
-    </>
-);
+
+export const NavbarLinks = ({ text, link }: NavbarLinksProps) => {
+
+    const {navBarOpen,setNavBarOpen} = useContext(PortfolioContext);
+
+    const router = useRouter();
+
+    const handleNavigation = (href: string) => {
+        setNavBarOpen((prev:boolean)=>!prev);
+        setTimeout(()=>router.push(href),1000);
+    }
+
+    return (
+        <>
+            <motion.div className="nav-link-new" style={{ opacity: 1 }} initial="initial" animate="open" whileHover="animate" >
+                <motion.div onClick={() => handleNavigation(link)} aria-current="page" className="nav-link w-inline-block w--current"   >
+                    <motion.div className="nav-link-text" id="textTranslateId" variants={textVariants} ><Typography text={text} size={64} smallSize={48} font='roca' weight={600} letterSpacing={0.01} /></motion.div>
+                    <motion.div className="nav-link-text" id="textTranslateId" variants={textVariants} ><Typography text={text} size={64} smallSize={48} font='roca' weight={600} letterSpacing={0.01} /></motion.div>
+                </motion.div>
+            </motion.div>
+        </>
+    )
+};

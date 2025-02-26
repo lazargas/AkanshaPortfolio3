@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectViewportWidth } from '@/redux/slice/viewPortSlice';
 import akansha from '@/assets/Images/AKANSHA.svg';  
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 type NavbarWrapperProps = {
     isHome: boolean;
@@ -18,6 +19,12 @@ export const NavbarWrapper = ({ isHome }: NavbarWrapperProps) => {
     const { navBarOpen } = useContext(PortfolioContext);
     const { navRef } = useContext(PortfolioContext);
     const width = useSelector(selectViewportWidth);
+
+    const router = useRouter();
+
+    const handleNavigation = () => {
+        router.push('/');
+    }
 
     return (
         <>
@@ -30,7 +37,9 @@ export const NavbarWrapper = ({ isHome }: NavbarWrapperProps) => {
                 <div className='container-navbar w-container'>
                     <div className='w-layout-hflex nav-bar-wrapper new'>
                         <div className='nav-left'>
-                            <a className='link-block-home w-inline-block' href="/">
+                            <div
+                            onClick={handleNavigation}
+                            className='link-block-home w-inline-block' >
                                 <div className='logo-container'>
                                     {isHome && <Image
                                         src={akansha}
@@ -39,7 +48,7 @@ export const NavbarWrapper = ({ isHome }: NavbarWrapperProps) => {
                                         alt="logo"
                                     />}
                                 </div>
-                            </a>
+                            </div>
                         </div>
                         <div className='nav-right' >
                             <ButtonNavContainer />

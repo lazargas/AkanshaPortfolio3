@@ -5,6 +5,7 @@ import { projects } from '@/api/data';
 import "./style.css";
 import { motion, cubicBezier, useScroll, useTransform } from "framer-motion";
 import { PortfolioContext } from '@/context/Portfolio';
+import { useRouter } from 'next/navigation';
 
 type MoreProjectsWrapperProps = {}
 
@@ -45,6 +46,12 @@ export const ProjectsWrapper = ({ }: MoreProjectsWrapperProps) => {
         }
 
     }, []);
+
+    const router = useRouter();
+
+    const handleNavigation = () => {
+        router.push("/all-work");
+    }
 
 
 
@@ -94,14 +101,14 @@ export const ProjectsWrapper = ({ }: MoreProjectsWrapperProps) => {
                             animate="initial"
                             whileHover="animate"
                             className="bottom-cta">
-                            <a href="/all-work" className="link-block-button w-inline-block">
+                            <div onClick={handleNavigation} className="link-block-button w-inline-block">
                                 <motion.div className="primary-button">
                                     <motion.div className="primary-button-text">All work</motion.div>
                                 </motion.div>
                                 <motion.div variants={containerVars} className="button-gradient-container">
                                     <motion.div className="button-gradient"></motion.div>
                                 </motion.div>
-                            </a>
+                            </div>
                         </motion.div>
                     </motion.div>
                 </motion.div>

@@ -5,6 +5,7 @@ import { projects } from '@/api/data';
 import "./style.css";
 import { motion, cubicBezier } from "framer-motion";
 import { Card } from '@/components/Cards/Card';
+import { useRouter } from 'next/navigation';
 
 type MoreProjectsWrapperProps = {}
 
@@ -28,12 +29,15 @@ export const MoreWorkWrapper = ({ }: MoreProjectsWrapperProps) => {
     useEffect(() => {
         if (window != undefined) {
             const Innerwidth = window.innerWidth;
-            console.log(Innerwidth, "akarsh");
             setWidth(Innerwidth);
-            console.log(width);
         }
 
     }, []);
+    const router = useRouter();
+
+    const handleNavigation = () => {
+        router.push('/all-work');
+    }
     return (
         <>
             <motion.div id="featured-projects" className="main-section">
@@ -82,7 +86,7 @@ export const MoreWorkWrapper = ({ }: MoreProjectsWrapperProps) => {
                         animate="initial"
                         whileHover="animate"
                         className="bottom-cta">
-                        <a href="/all-work" className="link-block-button w-inline-block">
+                        <a onClick={handleNavigation} className="link-block-button w-inline-block">
                             <motion.div className="primary-button">
                                 <motion.div className="primary-button-text">All work</motion.div>
                             </motion.div>

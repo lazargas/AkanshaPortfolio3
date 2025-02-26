@@ -5,6 +5,7 @@ import "./style.css";
 import { Typography } from '../Typography/Typography';
 import { animate, AnimatePresence, motion } from 'framer-motion';
 import { PortfolioContext } from '@/context/Portfolio';
+import { useRouter } from 'next/navigation';
 
 
 type ProjectItemProps = {
@@ -15,6 +16,8 @@ type ProjectItemProps = {
 }
 
 const ProjectItem = ({ title, subHeading, skills, content }: ProjectItemProps) => {
+
+    const router = useRouter();
 
     const { width } = useContext(PortfolioContext);
 
@@ -46,6 +49,10 @@ const ProjectItem = ({ title, subHeading, skills, content }: ProjectItemProps) =
         }
     }
 
+    const handleNavigation = () => {
+        router.push(`/project/${title.toLowerCase()}`)
+    }
+
     return (
         <AnimatePresence>
             <motion.div
@@ -53,9 +60,10 @@ const ProjectItem = ({ title, subHeading, skills, content }: ProjectItemProps) =
                 animate="initial"
                 whileHover="animate"
                 role="listitem" className="w-dyn-item overflow-hidden">
-                <motion.a
+                <motion.div
                     initial="initial" animate="initial" whileHover="animate"
-                    href={`/project/${title.toLowerCase()}`} className="link-block w-inline-block">
+                    onClick={handleNavigation}
+                    className="link-block w-inline-block">
                     <div className="featured-project-container">
                         <div className="featured-project">
                             <div className="featured-project-left">
@@ -83,7 +91,7 @@ const ProjectItem = ({ title, subHeading, skills, content }: ProjectItemProps) =
                         <div className="divider-full-inner section">
                         </div>
                     </div>
-                </motion.a>
+                </motion.div>
             </motion.div>
         </AnimatePresence>
     )
